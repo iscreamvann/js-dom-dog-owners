@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function renderMainCard(dog) {
         mainDogSection.innerHTML = "";
         const dogSection = document.createElement('section');
-        dogSection.classList.add('main__dog-section');
 
         const dogTitle = document.createElement('h2');
         dogTitle.textContent = dog.name;
@@ -163,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
             image: image
         };
 
-        data.push(newDog);
+        data.unshift(newDog);
         renderDogList();
     }
 
